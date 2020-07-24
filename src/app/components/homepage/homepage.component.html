@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <div class="page-header clear-filter">
+        <div class="page-header-image rellax-header" data-rellax-speed="-7"
+            style="background-image: url('assets/img/header.jpg');">
+
+        </div>
+        <div class="container">
+            <div class="content-center brand">
+
+                <h1 class="h1-seo">Sthore.</h1>
+                <h3>Encontre os melhores produtos aqui!</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div *ngFor="let produto of produtos.produtos" class="col-md-3">
+                    <a [routerLink]="['/produto/', produto.id]">
+                    <div  class="card">
+                        <img class="card-img" [src]="getFotoPreview(produto)">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ produto.nome }}</h5>
+                            <h4 class="card-text float-right">R$ {{ produto.preco }}</h4>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

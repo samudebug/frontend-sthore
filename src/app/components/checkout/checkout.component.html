@@ -1,0 +1,36 @@
+<header>
+    <h2>Checkout</h2>
+</header>
+
+<div class="wrapper">
+    <div class="main produtos">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-stripped">
+                    <thead>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let produto of produtos">
+                            <td>{{ produto.nome }}</td>
+                            <td>R$ {{ produto.preco }}</td>
+                        </tr>
+                        <tr>
+                            <td>Frete</td>
+                            <td>Grátis</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="d-flex justify-content-end flex-md-row">
+                    <h5 class="subtotal">Subtotal: R$ {{ getSubtotal() }}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-primary btn-round btn-block btn-confirmar">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+header {
+    padding: 5%;
+    text-align: center;
+}
+
+.produtos {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.subtotal {
+    font-weight: bold;
+    padding-right: 2%;
+}
+
+.btn-confirmar {
+    font-size: large;
+}

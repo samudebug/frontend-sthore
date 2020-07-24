@@ -1,0 +1,26 @@
+<div class="wrapper">
+    
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="section" id="carousel">
+                        <div class="container">
+                            <ngb-carousel>
+                                <ng-template *ngFor="let foto of produto.fotos" ngbSlide>
+                                    <img [src]="foto.linkFoto" alt="a" class="d-block">
+                                </ng-template>
+                            </ngb-carousel>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center flex-md-column">
+                    <h2 class="title">{{ produto.nome }}</h2>
+                    <p class="desc">{{ produto.descricao }}</p>
+                    <h3 class="align-self-end">R$ {{ produto.preco }}</h3>
+                    <button class="btn btn-primary btn-round " type="button" (click)="goCheckout()"><i class="now-ui-icons shopping_cart-simple"></i> Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
